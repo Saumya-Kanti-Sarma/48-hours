@@ -1,8 +1,12 @@
+import Aside from "@/components/Aside/Aside.component"
+import Navbar from "@/components/Navbar/Navbar.component"
+
 const page = () => {
   return (
-    <div>
-      feeling alive :)
-    </div>
+    <main>
+      <Navbar />
+      <Aside />
+    </main >
   )
 }
 

@@ -5,6 +5,23 @@
   --black: #000000;
 }
 
+@layer base {
+  h1 {
+    @apply text-3xl font-extrabold
+  }
+
+  button {
+    @apply hover:opacity-70
+  }
+
+}
+
+@layer components {
+  .transition-ease-in-out {
+    @apply transition-colors ease-in-out duration-25
+  }
+}
+
 .flex-center {
   @apply flex justify-center items-center
 }
