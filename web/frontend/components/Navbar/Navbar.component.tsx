@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Navbar = () => {
   return (
-    <nav className="bg-black h-17.5 w-full flex-between px-10 max-[370px]:px-2 max-sm:h-15">
+    <nav className="bg-(--black) h-17.5 w-full flex-between px-10 max-[370px]:px-2 max-sm:h-15">
       <div className='flex-center gap-1.5 '>
         <Image src={"search-menu.svg"} alt='search-icon' width={30} height={30} className='max-[840px]:w-5' />
         <Image
