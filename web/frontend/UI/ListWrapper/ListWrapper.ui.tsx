@@ -20,7 +20,7 @@ const ListWrapper = ({ heading, topics }: ListWrapperProps) => {
   };
 
   return (
-    <section>
+    <section className="w-74">
       <h1 className="font-sans font-bold text-4xl">{heading}</h1>
 
       <ul>
