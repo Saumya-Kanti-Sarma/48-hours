@@ -25,7 +25,7 @@ const SearchBox = ({
       <button
         onClick={onSearch}
         aria-label="Search"
-        className="flex items-center justify-center px-4 py-3 text-gray-600 hover:text-white hover:bg-blue-500 rounded-r-lg transition-colors"
+        className="flex items-center justify-center px-4 py-3 text-gray-600 hover:opacity-20 rounded-r-lg transition-colors"
       >
         <Search size={20} />
       </button>
