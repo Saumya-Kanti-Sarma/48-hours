@@ -20,7 +20,7 @@ const ListWrapper = ({ heading, topics }: ListWrapperProps) => {
   };
 
   return (
-    <section className="w-74">
+    <section className="w-74 max-[642px]:w-full max-[642px]:border-b max-[642px]:border-(--semi-white)">
       <h1 className="font-sans font-bold text-4xl">{heading}</h1>
 
       <ul>
@@ -28,7 +28,7 @@ const ListWrapper = ({ heading, topics }: ListWrapperProps) => {
           <li key={item} className="py-2">
             <Link
               href={`/${heading}/${item}`}
-              className="underline-offset-4 hover:underline transition-ease-in-out font-medium font-sans text-xl"
+              className="underline-offset-4 hover:underline transition-ease-in-out font-sans text-lg"
             >
               {item}
             </Link>
