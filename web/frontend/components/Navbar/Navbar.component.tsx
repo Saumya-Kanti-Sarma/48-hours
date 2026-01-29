@@ -2,16 +2,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Navbar = () => {
+type navprops = {
+  onClick: () => void;
+  toggleNavImg: boolean,
+}
+const Navbar = ({ onClick, toggleNavImg }: navprops) => {
+
   return (
     <nav className="bg-(--black) h-17.5 w-full flex-between px-10 max-[370px]:px-2 max-sm:h-15">
       <div className='flex-center gap-1.5 '>
-        <Image src={"search-menu.svg"} alt='search-icon' width={30} height={30} className='max-[840px]:w-5' />
+        <button onClick={onClick}>
+          <Image src={toggleNavImg ? "cross.svg" : "search-menu.svg"} alt='search-icon' width={30} height={30} className='max-[840px]:w-5' />
+        </button>
         <Image
-          src={"text-logo.svg"}
+          src="text-logo.svg"
           alt='text-logo'
           width={120} height={50}
           className='hidden max-[840px]:block max-[320px]:w-25' />
+
       </div>
 
       <div className='flex-center gap-1.5'>

@@ -1,10 +1,15 @@
+type asideProps = {
+  showAside: boolean
+}
+
 import SearchBox from "@/UI/SearchBox/SearchBox.UI"
 import Link from "next/link"
 import ListWrapper from "@/UI/ListWrapper/ListWrapper.ui"
 
-const Aside = () => {
+const Aside = ({ showAside }: asideProps) => {
   return (
-    <aside className="p-5 bg-(--black) h-[calc(100vh-71px)] text-white mt-px max-sm:h-[calc(100vh-60px)] overflow-auto">
+    <aside className={`${showAside ? "left-0" : "-left-full"} absolute
+     w-full p-5 bg-(--black) h-[calc(100vh-71px)] text-white mt-px max-sm:h-[calc(100vh-60px)] overflow-auto transition-all duration-400 ease-in-out`}>
       <div className="pb-5 flex flex-wrap justify-between items-center">
         <SearchBox
           placeHolder="Search for News, Articles and more..."
